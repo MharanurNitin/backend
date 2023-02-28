@@ -1,0 +1,13 @@
+import express from "express";
+import authRouter from "./auth.js";
+import CityRouter from "./Cities.js";
+import RestaurantRouter from "./Restaurant.js";
+import DishesRouter from "./Dishes.js";
+import CartRouter from "./Cart.js";
+const router = express.Router();
+router.use("/users", authRouter);
+router.use("/city", CityRouter);
+router.use("/Restaurant", RestaurantRouter);
+router.use("/Dishes", DishesRouter);
+router.use("/Cart", CartRouter);
+export default router;
